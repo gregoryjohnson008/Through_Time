@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				F3D45BA61B64345000B73551 /* AVFoundation.framework */,
-				F34CD0831A9FE6D600711EA1 /* Through Time */,
-				F34CD0991A9FE6D600711EA1 /* Through TimeTests */,
+				F34CD0831A9FE6D600711EA1 /* Through_Time */,
+				F34CD0991A9FE6D600711EA1 /* Through_TimeTests */,
 				F34CD0821A9FE6D600711EA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F34CD0831A9FE6D600711EA1 /* Through Time */ = {
+		F34CD0831A9FE6D600711EA1 /* Through_Time */ = {
 			isa = PBXGroup;
 			children = (
 				F365CB2F1AB10D1A005082FC /* Main.storyboard */,
@@ -135,7 +135,7 @@
 				F3ECEBCF1AC4D46000AA64C9 /* Bar.swift */,
 				F3D45BA11B64291900B73551 /* BattleViewController.swift */,
 			);
-			path = "Through Time";
+			path = Through_Time;
 			sourceTree = "<group>";
 		};
 		F34CD0841A9FE6D600711EA1 /* Supporting Files */ = {
@@ -147,13 +147,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F34CD0991A9FE6D600711EA1 /* Through TimeTests */ = {
+		F34CD0991A9FE6D600711EA1 /* Through_TimeTests */ = {
 			isa = PBXGroup;
 			children = (
 				F34CD09C1A9FE6D600711EA1 /* Through_TimeTests.swift */,
 				F34CD09A1A9FE6D600711EA1 /* Supporting Files */,
 			);
-			path = "Through TimeTests";
+			path = Through_TimeTests;
 			sourceTree = "<group>";
 		};
 		F34CD09A1A9FE6D600711EA1 /* Supporting Files */ = {
@@ -228,7 +228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F34CD07C1A9FE6D600711EA1 /* Build configuration list for PBXProject "Through Time" */;
+			buildConfigurationList = F34CD07C1A9FE6D600711EA1 /* Build configuration list for PBXProject "Through_Time" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -467,7 +467,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F34CD07C1A9FE6D600711EA1 /* Build configuration list for PBXProject "Through Time" */ = {
+		F34CD07C1A9FE6D600711EA1 /* Build configuration list for PBXProject "Through_Time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F34CD09E1A9FE6D600711EA1 /* Debug */,

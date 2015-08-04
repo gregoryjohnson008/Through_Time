@@ -12,7 +12,8 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var mainView: UIView!
+    
+    @IBOutlet var backgroundImage: UIImageView!
     
     @IBOutlet weak var buttonMoney1: UIButton!
     @IBOutlet weak var buttonMoney2: UIButton!
@@ -83,12 +84,7 @@ class ViewController: UIViewController {
                 println("Era not yet implemented")
         }
         
-        let screenSize: CGRect = UIScreen.mainScreen().bounds
-        width = screenSize.width
-        length = screenSize.height
-        var imageViewObject = UIImageView(frame:CGRectMake(0, 0, width, length));
-        imageViewObject.image = data_s.im_background
-        self.mainView.addSubview(imageViewObject)
+        backgroundImage.image = data_s.im_background
         
         updateButtons()
         

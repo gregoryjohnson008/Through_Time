@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0610"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F34CD0801A9FE6D600711EA1"
                BuildableName = "Through Time.app"
                BlueprintName = "Through Time"
-               ReferencedContainer = "container:Through Time.xcodeproj">
+               ReferencedContainer = "container:Through_Time.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "F34CD0951A9FE6D600711EA1"
                BuildableName = "Through TimeTests.xctest"
                BlueprintName = "Through TimeTests"
-               ReferencedContainer = "container:Through Time.xcodeproj">
+               ReferencedContainer = "container:Through_Time.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "F34CD0951A9FE6D600711EA1"
                BuildableName = "Through TimeTests.xctest"
                BlueprintName = "Through TimeTests"
-               ReferencedContainer = "container:Through Time.xcodeproj">
+               ReferencedContainer = "container:Through_Time.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "F34CD0801A9FE6D600711EA1"
             BuildableName = "Through Time.app"
             BlueprintName = "Through Time"
-            ReferencedContainer = "container:Through Time.xcodeproj">
+            ReferencedContainer = "container:Through_Time.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -72,13 +72,14 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F34CD0801A9FE6D600711EA1"
             BuildableName = "Through Time.app"
             BlueprintName = "Through Time"
-            ReferencedContainer = "container:Through Time.xcodeproj">
+            ReferencedContainer = "container:Through_Time.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -90,13 +91,14 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F34CD0801A9FE6D600711EA1"
             BuildableName = "Through Time.app"
             BlueprintName = "Through Time"
-            ReferencedContainer = "container:Through Time.xcodeproj">
+            ReferencedContainer = "container:Through_Time.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

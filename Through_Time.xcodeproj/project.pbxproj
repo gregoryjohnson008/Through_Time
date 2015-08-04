@@ -64,7 +64,7 @@
 		F365CB681AB26163005082FC /* GameOfLuckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOfLuckViewController.swift; sourceTree = "<group>"; };
 		F3B5D0931ABB8DB300A1BB55 /* Peg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peg.swift; sourceTree = "<group>"; };
 		F3D45BA11B64291900B73551 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
-		F3D45BA41B64331F00B73551 /* music_game.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music_game.mp3; path = ../../../../../Documents/music_game.mp3; sourceTree = "<group>"; };
+		F3D45BA41B64331F00B73551 /* music_game.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music_game.mp3; path = ../../../Documents/music_game.mp3; sourceTree = "<group>"; };
 		F3D45BA61B64345000B73551 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F3D5AAB91AAFBBB300603D31 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		F3D5AABF1AB1040B00603D31 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -153,7 +153,8 @@
 				F34CD09C1A9FE6D600711EA1 /* Through_TimeTests.swift */,
 				F34CD09A1A9FE6D600711EA1 /* Supporting Files */,
 			);
-			path = Through_TimeTests;
+			name = Through_TimeTests;
+			path = "Through TimeTests";
 			sourceTree = "<group>";
 		};
 		F34CD09A1A9FE6D600711EA1 /* Supporting Files */ = {
@@ -412,7 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Through Time/Info.plist";
+				INFOPLIST_FILE = Through_Time/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -423,7 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Through Time/Info.plist";
+				INFOPLIST_FILE = Through_Time/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

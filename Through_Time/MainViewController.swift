@@ -84,6 +84,7 @@ class ViewController: UIViewController {
                 println("Era not yet implemented")
         }
         
+        //Sets background image
         backgroundImage.image = data_s.im_background
         
         updateButtons()
@@ -91,12 +92,12 @@ class ViewController: UIViewController {
         //Start getting money per second
         if(data_s.toAddOverTime)
         {
-            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("addMoney"), userInfo: nil, repeats: true)
+            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("addMoney"), userInfo: nil, repeats: true)
             data_s.toAddOverTime = false
         }
         else
         {
-            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
+            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
         }
     }
     
@@ -138,10 +139,10 @@ class ViewController: UIViewController {
     //Called when first button is clicked (money 1 of 3)
     @IBAction func buttonMoney1(sender: AnyObject)
     {
-        if(data_s.money >= data_s.buttonCost1)
+        if(Int(data_s.money) >= data_s.buttonCost1)
         {
             data_s.perSec += data_s.moneyGive1
-            data_s.money -= data_s.buttonCost1
+            data_s.money -= Float64(data_s.buttonCost1)
             data_s.buttonCost1 += Int(Double(data_s.buttonCost1) * 0.2) //increase by 20%
             data_s.buttonCount1 += 1
             updateMoney()
@@ -151,10 +152,10 @@ class ViewController: UIViewController {
     //Called when second button is clicked (money 2 of 3)
     @IBAction func buttonMoney2(sender: AnyObject)
     {
-        if(data_s.money >= data_s.buttonCost2)
+        if(Int(data_s.money) >= data_s.buttonCost2)
         {
             data_s.perSec += data_s.moneyGive2
-            data_s.money -= data_s.buttonCost2
+            data_s.money -= Float64(data_s.buttonCost2)
             data_s.buttonCost2 += Int(Double(data_s.buttonCost2) * 0.2) //increase by 20%
             data_s.buttonCount2 += 1
             updateMoney()
@@ -164,10 +165,10 @@ class ViewController: UIViewController {
     //Called when third button is clicked (money 3 of 3)
     @IBAction func buttonMoney3(sender: AnyObject)
     {
-        if(data_s.money >= data_s.buttonCost3)
+        if(Int(data_s.money) >= data_s.buttonCost3)
         {
             data_s.perSec += data_s.moneyGive3
-            data_s.money -= data_s.buttonCost3
+            data_s.money -= Float64(data_s.buttonCost3)
             data_s.buttonCost3 += Int(Double(data_s.buttonCost3) * 0.2) //increase by 20%
             data_s.buttonCount3 += 1
             updateMoney()
@@ -177,12 +178,12 @@ class ViewController: UIViewController {
     //Clicked when fourth button is clicked (attr 1 of 2)
     @IBAction func buttonAttr1(sender: AnyObject)
     {
-        if(data_s.money >= data_s.buttonCost4)
+        if(Int(data_s.money) >= data_s.buttonCost4)
         {
             let ind = advance(data_s.attrString1.startIndex, 0)
             data_s.avatar.increaseStat(data_s.attrGive1, stat: data_s.attrString1[ind])
             
-            data_s.money -= data_s.buttonCost4
+            data_s.money -= Float64(data_s.buttonCost4)
             data_s.buttonCost4 += Int(Double(data_s.buttonCost4) * 0.2) //increase by 20%
             data_s.buttonCount4 += 1
             updateMoney()
@@ -192,12 +193,12 @@ class ViewController: UIViewController {
     //Clicked when fourth button is clicked (attr 2 of 2)
     @IBAction func buttonAttr2(sender: AnyObject)
     {
-        if(data_s.money >= data_s.buttonCost5)
+        if(Int(data_s.money) >= data_s.buttonCost5)
         {
             let ind = advance(data_s.attrString2.startIndex, 0)
             data_s.avatar.increaseStat(data_s.attrGive2, stat: data_s.attrString2[ind])
 
-            data_s.money -= data_s.buttonCost5
+            data_s.money -= Float64(data_s.buttonCost5)
             data_s.buttonCost5 += Int(Double(data_s.buttonCost5) * 0.2) //increase by 20%
             data_s.buttonCount5 += 1
             updateMoney()
@@ -207,7 +208,7 @@ class ViewController: UIViewController {
     //Called every second to update money amount with perSec gain
     func addMoney()
     {
-        data_s.money += data_s.perSec
+        data_s.money += Float64(data_s.perSec) / 10.0
         updateMoney()
     }
     
@@ -227,7 +228,7 @@ class ViewController: UIViewController {
     //Called to update what money is shown
     func updateMoney()
     {
-        self.labelMoney.text = String(format: "%i gold", data_s.money)
+        self.labelMoney.text = String(format: "%i gold", Int(data_s.money))
         self.moneyPerSecondLabel.text = String(format: "%i gold/second", data_s.perSec)
     }
     

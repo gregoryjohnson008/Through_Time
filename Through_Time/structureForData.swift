@@ -11,7 +11,7 @@ import UIKit
 //holds all data to be used in different views
 struct Game_s
 {
-    var money:Int = 0
+    var money:Float64 = 0
     var avatar:Avatar = Avatar()
     enum Era
     {

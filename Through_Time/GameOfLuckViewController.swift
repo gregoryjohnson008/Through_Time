@@ -41,7 +41,7 @@ class GameOfLuckViewController: UIViewController
         button2.setTitle("", forState: UIControlState.Normal)
         button3.setTitle("", forState: UIControlState.Normal)
         
-        var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
+        var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning()
@@ -52,7 +52,7 @@ class GameOfLuckViewController: UIViewController
     
     func updateMoney()
     {
-        self.moneyLabel.text = String(format: "%i gold", data_s.money)
+        self.moneyLabel.text = String(format: "%i gold", Int(data_s.money))
     }
     
     @IBAction func playGame(sender: AnyObject)

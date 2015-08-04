@@ -230,6 +230,50 @@ class ViewController: UIViewController {
     {
         self.labelMoney.text = String(format: "%i gold", Int(data_s.money))
         self.moneyPerSecondLabel.text = String(format: "%i gold/second", data_s.perSec)
+        
+        if(Int(data_s.money) >= data_s.buttonCost1)
+        {
+            self.buttonMoney1.enabled = true
+        }
+        else
+        {
+            self.buttonMoney1.enabled = false
+        }
+        if(Int(data_s.money) >= data_s.buttonCost2)
+        {
+            self.buttonMoney2.enabled = true
+        }
+        else
+        {
+            self.buttonMoney2.enabled = false
+        }
+        if(Int(data_s.money) >= data_s.buttonCost3)
+        {
+            self.buttonMoney3.enabled = true
+        }
+        else
+        {
+            self.buttonMoney3.enabled = false
+        }
+        if(Int(data_s.money) >= data_s.buttonCost4)
+        {
+            self.buttonAttr1.enabled = true
+        }
+        else
+        {
+            self.buttonAttr1.enabled = false
+        }
+        if(Int(data_s.money) >= data_s.buttonCost5)
+        {
+            self.buttonAttr2.enabled = true
+        }
+        else
+        {
+            self.buttonAttr2.enabled = false
+        }
+        
+        
+        
     }
     
     //Changes the animation between views to the ones created

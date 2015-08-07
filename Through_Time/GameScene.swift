@@ -16,18 +16,18 @@ class GameScene: SKScene
     
     var coinNode:Coin?
     
-    var pegNode:[Peg] = [Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg")]
+    var pegNode:[Peg] = [Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg")]
     
     var goalNode:[Bar] = [Bar(imageNamed: "bar"), Bar(imageNamed: "bar")]
     var yPosGoal:CGFloat = -20
-    var distBetween:Int = 70
+    var distBetween:Int = 85
     
     var falling:Bool = false
     var coinStartX:CGFloat = 0
     var coinStartY:CGFloat = 0
     
-    var relPeg:CGFloat = 10
-    let rowOffset:CGFloat = 25
+    var relPeg:CGFloat = 50 //distance from initial peg from wall
+    var pegBtwn:Int = 65 // distance between pegs
     
     var countDown:Bool = false
     
@@ -38,6 +38,11 @@ class GameScene: SKScene
     
     override func didMoveToView(view: SKView)
     {
+        println("Called")
+        
+        /*Clear the view
+        view.subviews.map({$0.removeFromSuperview()})*/
+        
         //Set up variables for scene width and height
         sceneWidth = self.view!.scene!.size.width
         sceneHeight = self.view!.scene!.size.height
@@ -73,11 +78,12 @@ class GameScene: SKScene
         // 1. Creat SKPhysicsBody
         let borders:[SKPhysicsBody] = [SKPhysicsBody(edgeFromPoint: CGPoint(x: 0, y: sceneHeight), toPoint: CGPoint(x: 0, y: 0)), SKPhysicsBody(edgeFromPoint: CGPoint(x: sceneWidth, y: sceneHeight), toPoint: CGPoint(x: sceneWidth, y: 0))]
         let fullBorder = SKPhysicsBody(bodies: borders)
+        
         // 2. Set the friction of that physicsBody to 0
         fullBorder.friction = 1
         fullBorder.dynamic = false
         fullBorder.mass = 1
-        fullBorder.restitution = 2
+
         // 3. Set physicsBody of scene to borderBody
         self.physicsBody = fullBorder
         
@@ -85,23 +91,7 @@ class GameScene: SKScene
         coinNode = Coin(imageNamed: "coin")
         coinNode!.position = CGPointMake(coinStartX , coinStartY)
         
-        for(var i = 0, j = 200, k = 0; i < pegNode.count; i++, k++)
-        {
-            if(k < 15)
-            {
-                pegNode[i].position = CGPointMake(relPeg + CGFloat(k * 50) + pegNode[i].imSize.width / 2 , CGFloat(j))
-            }
-            else
-            {
-                pegNode[i].position = CGPointMake(relPeg + rowOffset + CGFloat((k - 15) * 50) + pegNode[i].imSize.width / 2 , CGFloat(j + 50))
-            }
-            if(k == 28)
-            {
-                k = -1
-                j += 100
-            }
-            self.addChild(pegNode[i])
-        }
+        setPegsOne()
         
         setGoalPos(goalNode, space: distBetween)
         
@@ -110,6 +100,46 @@ class GameScene: SKScene
         self.addChild(coinNode!) //may not be able to add without a position
         self.addChild(goalNode[0])
         self.addChild(goalNode[1])
+    }
+    
+     func setPegsOne()
+    {
+        var pegWidth:CGFloat = pegNode[0].imSize.width
+        var numLineOnePegs:Int = Int(Double(sceneWidth) / Double(pegBtwn)) //amount of pegs for line
+        var numLineTwoPegs:Int = numLineOnePegs - 1
+        var x:CGFloat = 0
+        var total:Int = numLineOnePegs * 7 + numLineTwoPegs * 6
+        total = min(total, pegNode.count)
+        
+        for(var count = 0, distDown = 200, k = 0; count < total; count++, k++)
+        {
+            if(k == 0)
+            {
+                x = relPeg
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown))
+            }
+            else if(k < numLineOnePegs)
+            {
+                x = relPeg + CGFloat(k * pegBtwn)
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown))
+            }
+            else if(k == numLineOnePegs)
+            {
+                x = relPeg + CGFloat(pegBtwn / 2)
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown + 50))
+            }
+            else
+            {
+                x = relPeg + CGFloat((k - numLineOnePegs) * pegBtwn) + CGFloat(pegBtwn / 2)
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown + 50))
+            }
+            if(k == numLineOnePegs + numLineTwoPegs - 1)
+            {
+                k = -1
+                distDown += 100
+            }
+            self.addChild(pegNode[count])
+        }
     }
     
     func setGoalPos(goal:[SKSpriteNode], space:Int)

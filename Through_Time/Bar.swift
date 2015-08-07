@@ -21,7 +21,8 @@ class Bar: SKSpriteNode
         let imageTexture = SKTexture(imageNamed: imageNamed)
         super.init(texture: imageTexture, color:nil, size: imageTexture.size())
         
-        self.physicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width/2)//makes more sense to make coin a circle
+        var size:CGSize = CGSize(width: imageTexture.size().width/2, height: imageTexture.size().height)
+        self.physicsBody = SKPhysicsBody(rectangleOfSize: size)
         self.physicsBody?.dynamic = false //give physics properties: starting as false
         self.physicsBody?.mass = 1
     }

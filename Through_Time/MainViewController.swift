@@ -84,8 +84,20 @@ class ViewController: UIViewController {
                 println("Era not yet implemented")
         }
         
+        buttonClicker.backgroundColor = UIColor.clearColor()
+        buttonMoney1.backgroundColor = UIColor.clearColor()
+        buttonMoney2.backgroundColor = UIColor.clearColor()
+        buttonMoney3.backgroundColor = UIColor.clearColor()
+        buttonAttr1.backgroundColor = UIColor.clearColor()
+        buttonAttr2.backgroundColor = UIColor.clearColor()
+        
         //Sets background image
         backgroundImage.image = data_s.im_background
+        self.buttonMoney1.setBackgroundImage(data_s.im_buttons, forState: .Normal)
+        self.buttonMoney2.setBackgroundImage(data_s.im_buttons, forState: .Normal)
+        self.buttonMoney3.setBackgroundImage(data_s.im_buttons, forState: .Normal)
+        self.buttonAttr1.setBackgroundImage(data_s.im_buttons, forState: .Normal)
+        self.buttonAttr2.setBackgroundImage(data_s.im_buttons, forState: .Normal)
         
         updateButtons()
         
@@ -271,9 +283,38 @@ class ViewController: UIViewController {
         {
             self.buttonAttr2.enabled = false
         }
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        var rad:CGFloat = 10.0
+        var bordW:CGFloat = 0.25
         
+        //Rounded corners to the buttons
+        buttonMoney1.layer.cornerRadius = rad
+        buttonMoney2.layer.cornerRadius = rad
+        buttonMoney3.layer.cornerRadius = rad
+        buttonAttr1.layer.cornerRadius = rad
+        buttonAttr2.layer.cornerRadius = rad
         
+        //Give the buttons a border color and width
+        buttonMoney1.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
+        buttonMoney1.layer.borderWidth = bordW
+        buttonMoney2.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
+        buttonMoney2.layer.borderWidth = bordW
+        buttonMoney3.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
+        buttonMoney3.layer.borderWidth = bordW
+        buttonAttr1.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
+        buttonAttr1.layer.borderWidth = bordW
+        buttonAttr2.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).CGColor
+        buttonAttr2.layer.borderWidth = bordW
         
+        //Add these attributes to the UI
+        buttonMoney1.layer.masksToBounds = true
+        buttonMoney2.layer.masksToBounds = true
+        buttonMoney3.layer.masksToBounds = true
+        buttonAttr1.layer.masksToBounds = true
+        buttonAttr2.layer.masksToBounds = true
     }
     
     //Changes the animation between views to the ones created

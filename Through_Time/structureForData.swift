@@ -34,6 +34,8 @@ struct Game_s
     var im_but5:UIImage? = nil
     var im_background:UIImage? = nil
     
+    var im_buttons:UIImage? = UIImage(named: "Parchment")
+    
     var musicPlaying:Bool = false
     
     var timePeriod:Era = Era.Caveman

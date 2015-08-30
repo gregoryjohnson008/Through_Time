@@ -11,6 +11,14 @@ import UIKit
 class BattleViewController: UIViewController
 {
     
+    @IBOutlet weak var goodGuy: UIImageView!
+    @IBOutlet weak var badGuy: UIImageView!
+    
+    @IBOutlet weak var healthFull_goodGuy: UIImageView!
+    @IBOutlet weak var healthFull_badGuy: UIImageView!
+    @IBOutlet weak var healthEmpty_goodGuy: UIImageView!
+    @IBOutlet weak var healthEmpty_badGuy: UIImageView!
+    
     let transitionManager = TransitionManager(direction: TransitionManager.Direction.down)
     
     override func viewDidLoad()

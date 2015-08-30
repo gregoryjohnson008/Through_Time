@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7761278B-395A-431C-A5FB-17AA47BD8008</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Through_Time</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>EC92352486C484BF41FAC0EC99D7FF8FC2E2FB6B</key>
 		<string>github.com:gregoryjohnson008/Through_Time.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Through_Time.xcodeproj</string>
+	<string>Through_Time.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EC92352486C484BF41FAC0EC99D7FF8FC2E2FB6B</key>

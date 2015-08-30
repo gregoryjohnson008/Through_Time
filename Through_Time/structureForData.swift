@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 //holds all data to be used in different views
 struct Game_s
@@ -36,7 +37,11 @@ struct Game_s
     
     var im_buttons:UIImage? = UIImage(named: "Parchment")
     
-    var musicPlaying:Bool = false
+    var audioURL:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("music_game", ofType: "mp3")!)
+    var musicFile = AVAudioPlayer()
+    
+    var musicIsPlaying:Bool = false
+    var musicStarted:Bool = false
     
     var timePeriod:Era = Era.Caveman
     

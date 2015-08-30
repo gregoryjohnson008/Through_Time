@@ -108,10 +108,10 @@ class GameScene: SKScene
         var numLineOnePegs:Int = Int(Double(sceneWidth) / Double(pegBtwn)) //amount of pegs for line
         var numLineTwoPegs:Int = numLineOnePegs - 1
         var x:CGFloat = 0
-        var total:Int = numLineOnePegs * 7 + numLineTwoPegs * 6
+        var total:Int = numLineOnePegs * 5 + numLineTwoPegs * 4 //5 rows + 4 rows = 9 rows total
         total = min(total, pegNode.count)
         
-        for(var count = 0, distDown = 200, k = 0; count < total; count++, k++)
+        for(var count = 0, distDown = 350, k = 0; count < total; count++, k++) //distDown: higher # means further up in scene
         {
             if(k == 0)
             {

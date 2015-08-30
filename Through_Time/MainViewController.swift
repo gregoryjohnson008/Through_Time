@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var backgroundImage: UIImageView!
     
+    @IBOutlet weak var buttonAudio: UIButton!
+    
     @IBOutlet weak var buttonMoney1: UIButton!
     @IBOutlet weak var buttonMoney2: UIButton!
     @IBOutlet weak var buttonMoney3: UIButton!
@@ -49,9 +51,6 @@ class ViewController: UIViewController {
     
     var currentEra = EraSuperClass()
     
-    var audioURL:NSURL? = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("music_game", ofType: "mp3")!)
-    var musicFile = AVAudioPlayer()
-    
     var width:CGFloat = 0
     var length:CGFloat = 0
     
@@ -59,12 +58,23 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        if(audioURL != nil && !data_s.musicPlaying)
+        //Starts music if not already on
+        if(data_s.audioURL != nil && !data_s.musicStarted)
         {
-            musicFile = AVAudioPlayer(contentsOfURL: audioURL!, error: nil)
-            musicFile.numberOfLoops = -1 //negative number means loop indefinitely
-            musicFile.play()
-            data_s.musicPlaying = true
+            data_s.musicFile = AVAudioPlayer(contentsOfURL: data_s.audioURL!, error: nil)
+            data_s.musicFile.numberOfLoops = -1 //negative number means loop indefinitely
+            data_s.musicFile.play()
+            data_s.musicIsPlaying = true
+            data_s.musicStarted = true
+        }
+        
+        if(data_s.musicIsPlaying)
+        {
+            buttonAudio.setImage(UIImage(named: "mute"), forState: .Normal)
+        }
+        else
+        {
+            buttonAudio.setImage(UIImage(named: "unmute"), forState: .Normal)
         }
         
         //Set up amount of money text
@@ -147,6 +157,25 @@ class ViewController: UIViewController {
         buttonAttr1.setImage(data_s.im_but4, forState: .Normal)
         buttonAttr2.setImage(data_s.im_but5, forState: .Normal)
     }
+    
+    
+    @IBAction func musicOnOff(sender: AnyObject)
+    {
+        if(data_s.musicIsPlaying)
+        {
+            data_s.musicFile.pause()
+            data_s.musicIsPlaying = false
+            buttonAudio.setImage(UIImage(named: "unmute"), forState: .Normal)
+        }
+        else
+        {
+            data_s.musicFile.play()
+            data_s.musicIsPlaying = true
+            buttonAudio.setImage(UIImage(named: "mute"), forState: .Normal)
+        }
+        
+    }
+
     
     //Called when first button is clicked (money 1 of 3)
     @IBAction func buttonMoney1(sender: AnyObject)

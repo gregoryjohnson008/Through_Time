@@ -97,11 +97,11 @@ class GameViewController: UIViewController
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-       /* if(segue.identifier == "toAchievements")
+        if(segue.identifier == "toMain")
         {
             transitionManager.changeDir(TransitionManager.Direction.down)
         }
-        */
+        
         // this gets a reference to the screen that we're about to transition to
         let toViewController = segue.destinationViewController as! UIViewController
         

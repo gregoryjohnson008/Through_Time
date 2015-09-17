@@ -38,7 +38,7 @@ class GameScene: SKScene
     
     override func didMoveToView(view: SKView)
     {
-        println("Called")
+        print("Called")
         
         /*Clear the view
         view.subviews.map({$0.removeFromSuperview()})*/
@@ -104,9 +104,9 @@ class GameScene: SKScene
     
      func setPegsOne()
     {
-        var pegWidth:CGFloat = pegNode[0].imSize.width
-        var numLineOnePegs:Int = Int(Double(sceneWidth) / Double(pegBtwn)) //amount of pegs for line
-        var numLineTwoPegs:Int = numLineOnePegs - 1
+        //var pegWidth:CGFloat = pegNode[0].imSize.width
+        let numLineOnePegs:Int = Int(Double(sceneWidth) / Double(pegBtwn)) //amount of pegs for line
+        let numLineTwoPegs:Int = numLineOnePegs - 1
         var x:CGFloat = 0
         var total:Int = numLineOnePegs * 5 + numLineTwoPegs * 4 //5 rows + 4 rows = 9 rows total
         total = min(total, pegNode.count)
@@ -144,14 +144,14 @@ class GameScene: SKScene
     
     func setGoalPos(goal:[SKSpriteNode], space:Int)
     {
-        var xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - 80))
-        var xRight:Int = xLeft + space
+        let xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - 80))
+        let xRight:Int = xLeft + space
         
         goalNode[0].position = CGPointMake(CGFloat(xLeft), yPosGoal)
         goalNode[1].position = CGPointMake(CGFloat(xRight), yPosGoal)
         
     }
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
     {
         
         /*Called when a touch begins */
@@ -188,7 +188,7 @@ class GameScene: SKScene
                 }
                 else
                 {
-                    println("Coin was never created")
+                    print("Coin was never created")
                 }
             }
         }
@@ -198,7 +198,7 @@ class GameScene: SKScene
     func someEvent()
     {
         coinNode!.makeBodyDynamic()
-        println("The wait is up")
+        print("The wait is up")
     }
     func subTime()
     {

@@ -61,11 +61,15 @@ class ViewController: UIViewController {
         //Starts music if not already on
         if(data_s.audioURL != nil && !data_s.musicStarted)
         {
-            data_s.musicFile = AVAudioPlayer(contentsOfURL: data_s.audioURL!, error: nil)
+            do{
+            data_s.musicFile = try AVAudioPlayer(contentsOfURL: data_s.audioURL!)
             data_s.musicFile.numberOfLoops = -1 //negative number means loop indefinitely
             data_s.musicFile.play()
             data_s.musicIsPlaying = true
             data_s.musicStarted = true
+            }catch let error as NSError{
+                print("Error starting music: \(error)")
+            }
         }
         
         if(data_s.musicIsPlaying)
@@ -91,7 +95,7 @@ class ViewController: UIViewController {
             case Game_s.Era.AncientEgypt:
                 self.buttonMoney1.setTitle("Eqypt", forState: UIControlState.Normal)
             default:
-                println("Era not yet implemented")
+                print("Era not yet implemented")
         }
         
         buttonClicker.backgroundColor = UIColor.clearColor()
@@ -146,7 +150,7 @@ class ViewController: UIViewController {
             self.BL5.text = String(format: "cost: %i\t\t\t\tgained: %i \(data_s.attrString2)", data_s.buttonCost5, data_s.buttonCount5 * data_s.attrGive2)
         //Add more eras here
             default:
-                println("Era not yet implemented")
+                print("Era not yet implemented")
         }
         
         //Set picture to clicker and buttons
@@ -221,7 +225,7 @@ class ViewController: UIViewController {
     {
         if(Int(data_s.money) >= data_s.buttonCost4)
         {
-            let ind = advance(data_s.attrString1.startIndex, 0)
+            let ind = data_s.attrString1.startIndex.advancedBy(0)
             data_s.avatar.increaseStat(data_s.attrGive1, stat: data_s.attrString1[ind])
             
             data_s.money -= Float64(data_s.buttonCost4)
@@ -236,7 +240,7 @@ class ViewController: UIViewController {
     {
         if(Int(data_s.money) >= data_s.buttonCost5)
         {
-            let ind = advance(data_s.attrString2.startIndex, 0)
+            let ind = data_s.attrString2.startIndex.advancedBy(0)
             data_s.avatar.increaseStat(data_s.attrGive2, stat: data_s.attrString2[ind])
 
             data_s.money -= Float64(data_s.buttonCost5)
@@ -316,8 +320,8 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool)
     {
-        var rad:CGFloat = 10.0
-        var bordW:CGFloat = 0.25
+        let rad:CGFloat = 10.0
+        let bordW:CGFloat = 0.25
         
         //Rounded corners to the buttons
         buttonMoney1.layer.cornerRadius = rad
@@ -366,7 +370,7 @@ class ViewController: UIViewController {
             transitionManager.changeDir(TransitionManager.Direction.down)
         }
         
-        let toViewController = segue.destinationViewController as! UIViewController
+        let toViewController = segue.destinationViewController 
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = transitionManager

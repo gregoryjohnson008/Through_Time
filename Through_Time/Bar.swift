@@ -19,9 +19,9 @@ class Bar: SKSpriteNode
     init(imageNamed:String)
     {
         let imageTexture = SKTexture(imageNamed: imageNamed)
-        super.init(texture: imageTexture, color:nil, size: imageTexture.size())
+        super.init(texture: imageTexture, color: UIColor.blackColor(), size: imageTexture.size())
         
-        var size:CGSize = CGSize(width: imageTexture.size().width/2, height: imageTexture.size().height)
+        let size:CGSize = CGSize(width: imageTexture.size().width/2, height: imageTexture.size().height)
         self.physicsBody = SKPhysicsBody(rectangleOfSize: size)
         self.physicsBody?.dynamic = false //give physics properties: starting as false
         self.physicsBody?.mass = 1

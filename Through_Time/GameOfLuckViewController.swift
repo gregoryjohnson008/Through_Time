@@ -61,7 +61,7 @@ class GameOfLuckViewController: UIViewController
         {
             var i = 0
             buttonDouble = Int(arc4random_uniform(3)) + 1
-            do
+            repeat
             {
                 buttonKeep = Int(arc4random_uniform(3)) + 1
                 i = i + 1
@@ -189,7 +189,7 @@ class GameOfLuckViewController: UIViewController
         case 3:
             image3.image = diamond
         default:
-            println("buttonDouble not set correctly")
+            print("buttonDouble not set correctly")
         }
         
         switch buttonKeep
@@ -201,7 +201,7 @@ class GameOfLuckViewController: UIViewController
         case 3:
             image3.image = coin
         default:
-            println("buttonKeep not set correctly")
+            print("buttonKeep not set correctly")
         }
     }
 
@@ -214,7 +214,7 @@ class GameOfLuckViewController: UIViewController
         }
         
         // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destinationViewController as! UIViewController
+        let toViewController = segue.destinationViewController 
         
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation

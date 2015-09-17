@@ -44,23 +44,23 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         var offToX:CGFloat = 0
         if(dir == Direction.right)
         {
-            offFromX = -container.frame.width
-            offToX = container.frame.width
+            offFromX = -container!.frame.width
+            offToX = container!.frame.width
         }
         else if(dir == Direction.left)
         {
-            offFromX = container.frame.width
-            offToX = -container.frame.width
+            offFromX = container!.frame.width
+            offToX = -container!.frame.width
         }
         else if(dir == Direction.up)
         {
-            offFromY = container.frame.height
-            offToY = -container.frame.height
+            offFromY = container!.frame.height
+            offToY = -container!.frame.height
         }
         else if(dir == Direction.down)
         {
-            offFromY = -container.frame.height
-            offToY = container.frame.height
+            offFromY = -container!.frame.height
+            offToY = container!.frame.height
         }
         let offScreenFrom = CGAffineTransformMakeTranslation(offFromX, offFromY)
         let offScreenTo = CGAffineTransformMakeTranslation(offToX, offToY)
@@ -69,8 +69,8 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         toView.transform = offScreenFrom
         
         // add the both views to our view controller
-        container.addSubview(toView)
-        container.addSubview(fromView)
+        container!.addSubview(toView)
+        container!.addSubview(fromView)
         
         // get the duration of the animation
         // DON'T just type '0.5s' -- the reason why won't make sense until the next post
@@ -81,7 +81,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         // for this example, just slid both fromView and toView to the left at the same time
         // meaning fromView is pushed off the screen and toView slides into view
         // we also use the block animation usingSpringWithDamping for a little bounce
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.8, options: nil, animations:
+        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.8, options: [], animations:
             {
             
             fromView.transform = offScreenTo
@@ -96,7 +96,7 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
     }
     
     // return how many seconds the transiton animation will take
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
     }
     

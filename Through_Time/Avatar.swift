@@ -47,7 +47,7 @@ class Avatar
         case "s":
             self.speed += amount
         default:
-            println("Wrong input for increasing stat.")
+            print("Wrong input for increasing stat.")
         }
     }
     
@@ -55,7 +55,7 @@ class Avatar
     //Return -1 if health reaches 0, 1 otherwise
     func takeDamage(amount:Int) -> Int
     {
-        var damage = amount - self.defense
+        let damage = amount - self.defense
         if(damage > 0)
         {
             self.currHealth = max(self.currHealth - damage, 0)

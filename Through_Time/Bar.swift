@@ -11,6 +11,7 @@ import SpriteKit
 
 class Bar: SKSpriteNode
 {
+    var imSize:CGSize
     required init(coder aDecoder:NSCoder)
     {
         fatalError("Init(coder:) has not been implemented")
@@ -19,9 +20,10 @@ class Bar: SKSpriteNode
     init(imageNamed:String)
     {
         let imageTexture = SKTexture(imageNamed: imageNamed)
-        super.init(texture: imageTexture, color: UIColor.blackColor(), size: imageTexture.size())
+        imSize = CGSize(width: imageTexture.size().width*data_s.mult/4, height: imageTexture.size().height*data_s.mult/2)
+        super.init(texture: imageTexture, color: UIColor.blackColor(), size: imSize)
         
-        let size:CGSize = CGSize(width: imageTexture.size().width/2, height: imageTexture.size().height)
+        let size:CGSize = CGSize(width: imSize.width, height: imSize.height)
         self.physicsBody = SKPhysicsBody(rectangleOfSize: size)
         self.physicsBody?.dynamic = false //give physics properties: starting as false
         self.physicsBody?.mass = 1

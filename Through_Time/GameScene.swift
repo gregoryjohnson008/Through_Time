@@ -16,18 +16,18 @@ class GameScene: SKScene
     
     var coinNode:Coin?
     
-    var pegNode:[Peg] = [Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg")]
+    var pegNode:[Peg] = [Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg"), Peg(imageNamed: "peg")]
     
     var goalNode:[Bar] = [Bar(imageNamed: "bar"), Bar(imageNamed: "bar")]
     var yPosGoal:CGFloat = -20
-    var distBetween:Int = 85
+    var distBetween:Int = 70*Int(data_s.mult) //distance between goal posts
     
     var falling:Bool = false
     var coinStartX:CGFloat = 0
     var coinStartY:CGFloat = 0
     
-    var relPeg:CGFloat = 50 //distance from initial peg from wall
-    var pegBtwn:Int = 65 // distance between pegs
+    var relPeg:CGFloat = 55*data_s.mult //distance from initial peg from wall
+    var pegBtwn:Int = 100*Int(data_s.mult) // distance between pegs
     
     var countDown:Bool = false
     
@@ -51,6 +51,9 @@ class GameScene: SKScene
         coinStartX = sceneWidth/2.0
         coinStartY = sceneHeight - 100
         
+        coinNode = Coin(imageNamed: "coin")
+        coinNode!.position = CGPointMake(coinStartX , coinStartY)
+        
         //Set up beginning time label
         time.text = "\(nums[0]) second(s)"
         time.fontSize = 24
@@ -67,11 +70,13 @@ class GameScene: SKScene
         myLabel1.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         myLabel2.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) - 40);
         
-        var redLine:[SKSpriteNode] = [SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine")]
+        var redLine:[SKSpriteNode] = [SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine"), SKSpriteNode(imageNamed: "redDropLine")]
         
-        for(var i = 0; i < redLine.count; i++)
+        let amount = Int(sceneWidth/redLine[0].size.width) + 1 //Add one to ensure it convers completely across
+        print("amount: \(amount)")
+        for(var i = 0; i < amount; i++)
         {
-            redLine[i].position = CGPoint(x: CGFloat(i * 100), y: coinStartY - 15)
+            redLine[i].position = CGPoint(x: CGFloat(i * Int(redLine[0].size.width)), y: coinStartY - coinNode!.size.height/2)
             self.addChild(redLine[i])
         }
         
@@ -83,14 +88,12 @@ class GameScene: SKScene
         fullBorder.friction = 1
         fullBorder.dynamic = false
         fullBorder.mass = 1
+        fullBorder.restitution = 0.5
 
         // 3. Set physicsBody of scene to borderBody
         self.physicsBody = fullBorder
         
         /*Setup scene here */
-        coinNode = Coin(imageNamed: "coin")
-        coinNode!.position = CGPointMake(coinStartX , coinStartY)
-        
         setPegsOne()
         
         setGoalPos(goalNode, space: distBetween)
@@ -111,7 +114,7 @@ class GameScene: SKScene
         var total:Int = numLineOnePegs * 5 + numLineTwoPegs * 4 //5 rows + 4 rows = 9 rows total
         total = min(total, pegNode.count)
         
-        for(var count = 0, distDown = 350, k = 0; count < total; count++, k++) //distDown: higher # means further up in scene
+        for(var count = 0, distDown = Int(sceneHeight*0.10), k = 0; count < total; count++, k++) //distDown: higher # means further up in scene
         {
             if(k == 0)
             {
@@ -126,17 +129,17 @@ class GameScene: SKScene
             else if(k == numLineOnePegs)
             {
                 x = relPeg + CGFloat(pegBtwn / 2)
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown + 50))
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown + pegBtwn/2))
             }
             else
             {
                 x = relPeg + CGFloat((k - numLineOnePegs) * pegBtwn) + CGFloat(pegBtwn / 2)
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown + 50))
+                pegNode[count].position = CGPointMake(x, CGFloat(distDown + pegBtwn/2))
             }
             if(k == numLineOnePegs + numLineTwoPegs - 1)
             {
                 k = -1
-                distDown += 100
+                distDown += pegBtwn
             }
             self.addChild(pegNode[count])
         }
@@ -144,7 +147,7 @@ class GameScene: SKScene
     
     func setGoalPos(goal:[SKSpriteNode], space:Int)
     {
-        let xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - 80))
+        let xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - UInt32(relPeg) - UInt32(pegBtwn))) + Int(relPeg)
         let xRight:Int = xLeft + space
         
         goalNode[0].position = CGPointMake(CGFloat(xLeft), yPosGoal)

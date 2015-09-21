@@ -22,10 +22,10 @@ class Peg: SKSpriteNode
     init(imageNamed:String)
     {
         let imageTexture = SKTexture(imageNamed: imageNamed)
-        imSize = imageTexture.size()
-        super.init(texture: imageTexture, color: UIColor.blackColor(), size: imageTexture.size())
+        imSize = CGSize(width: imageTexture.size().width*data_s.mult, height: imageTexture.size().height*data_s.mult)
+        super.init(texture: imageTexture, color: UIColor.blackColor(), size: imSize)
         
-        self.physicsBody = SKPhysicsBody(circleOfRadius: imageTexture.size().width/2)//makes more sense to make coin a circle 
+        self.physicsBody = SKPhysicsBody(circleOfRadius: imSize.width/2)//makes more sense to make coin a circle
         self.physicsBody?.dynamic = false //give physics properties: starting as false
         self.physicsBody?.mass = 1
     }

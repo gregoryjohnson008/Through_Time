@@ -25,11 +25,12 @@ class BattleViewController: UIViewController
     @IBOutlet weak var bAttackPos: UIView!
     
     @IBOutlet weak var attackButton: UIButton!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     let transitionManager = TransitionManager(direction: TransitionManager.Direction.down)
     
     var turn:Bool = true //true = goodGuy, false = badGuy
-    var speed = 2.0 //speed of the battle
+    var speed = 1.0 //speed of the battle
     
     //TEMPORARY---------------------------
     var badCurr_health:Int = 30
@@ -45,6 +46,7 @@ class BattleViewController: UIViewController
     {
         super.viewDidLoad()
         
+        self.healthFull_goodGuy.transform = CGAffineTransformMakeScale(max(0.001, CGFloat(data_s.avatar.currHealth) / CGFloat(data_s.avatar.maxHealth)), 1.0)
         healthText_goodGuy.text = "\(data_s.avatar.currHealth) / \(data_s.avatar.maxHealth)"
         healthText_badGuy.text = "\(badCurr_health) / \(badMax_health)"
         
@@ -69,7 +71,19 @@ class BattleViewController: UIViewController
      //   hitBadGuy.alpha = 0
         
     }
-    
+
+    @IBAction func indexChanged(sender: UISegmentedControl)
+    {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            speed = 1.0
+        case 1:
+            speed = 0.5
+        default:
+            break
+        }
+    }
     
     @IBAction func startBattle(sender: AnyObject)
     {
@@ -87,7 +101,7 @@ class BattleViewController: UIViewController
         attackButton.enabled = false
         
         //1. good guy goes toward bad guy
-        UIView.animateWithDuration(speed, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        UIView.animateWithDuration(speed, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             var nextFrame = self.goodGuy.frame
             nextFrame.origin.x = self.gAttachPos.frame.origin.x
             self.goodGuy.frame = nextFrame
@@ -99,7 +113,7 @@ class BattleViewController: UIViewController
         badCurr_health -= goodAttack //number to be replaced by generated value
         
         //2. Health bar changes size
-        UIView.animateWithDuration(0.5, delay: speed + 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+        UIView.animateWithDuration(0.5, delay: speed, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
             self.healthFull_badGuy.transform = CGAffineTransformMakeScale(max(0.001, CGFloat(self.badCurr_health) / CGFloat(self.badMax_health)), 1.0)
             
@@ -111,7 +125,7 @@ class BattleViewController: UIViewController
         
         
         //3. good guy goes back to starting position
-        UIView.animateWithDuration(speed, delay: speed + 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(speed, delay: speed, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             var nextFrame = self.goodGuy.frame
             nextFrame.origin.x = gFrame.origin.x
             self.goodGuy.frame = nextFrame
@@ -123,7 +137,7 @@ class BattleViewController: UIViewController
         if(badCurr_health > 0)
         {
             //4. bad guy goes toward bad guy
-            UIView.animateWithDuration(speed, delay: 1.0 + 2.0*speed, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            UIView.animateWithDuration(speed, delay: 2.0*speed, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 var nextFrame = self.badGuy.frame
                 nextFrame.origin.x = self.bAttackPos.frame.origin.x
                 self.badGuy.frame = nextFrame
@@ -135,7 +149,7 @@ class BattleViewController: UIViewController
             data_s.avatar.currHealth -= badAttack //number to be replaced by generated value
             
             //5. Health bar changes size
-            UIView.animateWithDuration(0.5, delay: 3.0*speed + 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            UIView.animateWithDuration(0.5, delay: 3.0*speed, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                 
                 self.healthFull_goodGuy.transform = CGAffineTransformMakeScale(max(0.001, CGFloat(data_s.avatar.currHealth) / CGFloat(data_s.avatar.maxHealth)), 1.0)
                 
@@ -147,7 +161,7 @@ class BattleViewController: UIViewController
             
             
             //6. good guy goes back to starting position
-            UIView.animateWithDuration(speed, delay: 3.0*speed + 1.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            UIView.animateWithDuration(speed, delay: 3.0*speed, options: UIViewAnimationOptions.CurveEaseOut, animations: {
                 var nextFrame = self.badGuy.frame
                 nextFrame.origin.x = bFrame.origin.x
                 self.badGuy.frame = nextFrame
@@ -168,19 +182,6 @@ class BattleViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func moveView(thisView:UIView, toMove:CGFloat)
-    {
-        UIView.animateWithDuration(3.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: {
-            var topFrame = thisView.frame
-            topFrame.origin.x += toMove
-            
-            thisView.frame = topFrame
-            }, completion: {
-                finished in
-                print("Moved")
-        })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)

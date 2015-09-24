@@ -26,9 +26,6 @@ class GameScene: SKScene
     var coinStartX:CGFloat = 0
     var coinStartY:CGFloat = 0
     
-    var relPeg:CGFloat = 55*data_s.mult //distance from initial peg from wall
-    var pegBtwn:Int = 100*Int(data_s.mult) // distance between pegs
-    
     var countDown:Bool = false
     
     var time = SKLabelNode(fontNamed: "Chalkduster")
@@ -74,23 +71,23 @@ class GameScene: SKScene
         
         let amount = Int(sceneWidth/redLine[0].size.width) + 1 //Add one to ensure it convers completely across
         print("amount: \(amount)")
-        for(var i = 0; i < amount; i++)
+        for(var i = 0; i <= amount; i++)
         {
             redLine[i].position = CGPoint(x: CGFloat(i * Int(redLine[0].size.width)), y: coinStartY - coinNode!.size.height/2)
             self.addChild(redLine[i])
         }
         
-        // 1. Creat SKPhysicsBody
+        //Creat SKPhysicsBody (borders for collision)
         let borders:[SKPhysicsBody] = [SKPhysicsBody(edgeFromPoint: CGPoint(x: 0, y: sceneHeight), toPoint: CGPoint(x: 0, y: 0)), SKPhysicsBody(edgeFromPoint: CGPoint(x: sceneWidth, y: sceneHeight), toPoint: CGPoint(x: sceneWidth, y: 0))]
         let fullBorder = SKPhysicsBody(bodies: borders)
         
-        // 2. Set the friction of that physicsBody to 0
+        //Set the friction of that physicsBody to 0
         fullBorder.friction = 1
         fullBorder.dynamic = false
         fullBorder.mass = 1
         fullBorder.restitution = 0.5
 
-        // 3. Set physicsBody of scene to borderBody
+        //Set physicsBody of scene to borderBody
         self.physicsBody = fullBorder
         
         /*Setup scene here */
@@ -105,49 +102,56 @@ class GameScene: SKScene
         self.addChild(goalNode[1])
     }
     
-     func setPegsOne()
+    func setPegsOne()
     {
-        //var pegWidth:CGFloat = pegNode[0].imSize.width
-        let numLineOnePegs:Int = Int(Double(sceneWidth) / Double(pegBtwn)) //amount of pegs for line
-        let numLineTwoPegs:Int = numLineOnePegs - 1
-        var x:CGFloat = 0
-        var total:Int = numLineOnePegs * 5 + numLineTwoPegs * 4 //5 rows + 4 rows = 9 rows total
-        total = min(total, pegNode.count)
+        /*
+            *   *   *
+              *   *
+            *   *   *
+              *   *
+            *   *   *
+              *   *
+            *   *   *
+              *   *
+            *   *   *
         
-        for(var count = 0, distDown = Int(sceneHeight*0.10), k = 0; count < total; count++, k++) //distDown: higher # means further up in scene
+            numLineOnePegs = 3
+            numLineTwoPegs = 2
+            sceneWidth = 20 * pegWidth
+            sceneHeight = 35.5 * pegHeight
+        */
+        
+        let totalPegs:Int = 24
+        let pegJump:CGFloat = sceneHeight*0.175
+        
+        var xPos:CGFloat = 0
+        var xMult:[CGFloat] = [0.2, 0.5, 0.8, 0.35, 0.65] //multipliers for x position of peg
+        
+        for(var pegIndex = 0, distDown = sceneHeight*0.10, count = 1; pegIndex < totalPegs - 1; pegIndex++, count++)
         {
-            if(k == 0)
+            if(count <= 3) //lines with 3 pegs
             {
-                x = relPeg
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown))
+                xPos = sceneWidth*xMult[count-1]
+                pegNode[pegIndex].position = CGPointMake(xPos, distDown)
             }
-            else if(k < numLineOnePegs)
+            else if(count <= 5) //lines with 2 pegs
             {
-                x = relPeg + CGFloat(k * pegBtwn)
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown))
+                xPos = sceneWidth*xMult[count-1]
+                pegNode[pegIndex].position = CGPointMake(xPos, distDown + (pegJump)/2)
             }
-            else if(k == numLineOnePegs)
+            
+            if(count == 5)
             {
-                x = relPeg + CGFloat(pegBtwn / 2)
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown + pegBtwn/2))
+                count = 0
+                distDown += pegJump
             }
-            else
-            {
-                x = relPeg + CGFloat((k - numLineOnePegs) * pegBtwn) + CGFloat(pegBtwn / 2)
-                pegNode[count].position = CGPointMake(x, CGFloat(distDown + pegBtwn/2))
-            }
-            if(k == numLineOnePegs + numLineTwoPegs - 1)
-            {
-                k = -1
-                distDown += pegBtwn
-            }
-            self.addChild(pegNode[count])
+            self.addChild(pegNode[pegIndex])
         }
     }
     
     func setGoalPos(goal:[SKSpriteNode], space:Int)
     {
-        let xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - UInt32(relPeg) - UInt32(pegBtwn))) + Int(relPeg)
+        let xLeft:Int = Int(arc4random_uniform(UInt32(sceneWidth) - UInt32(sceneWidth*0.2) - UInt32(sceneWidth*0.3))) + Int(sceneWidth*0.2)
         let xRight:Int = xLeft + space
         
         goalNode[0].position = CGPointMake(CGFloat(xLeft), yPosGoal)
@@ -215,12 +219,14 @@ class GameScene: SKScene
     override func update(currentTime: CFTimeInterval)
     {
         /*Called before each frame is rendered */
-        if(coinNode!.position.y < 0)
+        if(coinNode!.position.y < 0 && self.falling != false)
         {
             /*Coin get into goal*/
             if(goalNode[0].position.x < coinNode!.position.x && goalNode[1].position.x > coinNode!.position.x)
             {
                 time.text = "Got it in"
+                self.setGoalPos(goalNode, space: distBetween)
+                print("reset goal")
             }
             self.falling = false
             if(counting != nil)

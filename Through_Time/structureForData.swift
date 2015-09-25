@@ -96,6 +96,22 @@ struct Game_s
     var buttonCount4:Int = 0
     var buttonCount5:Int = 0
     
+    func startEra()
+    {
+        switch timePeriod
+        {
+        case Era.Caveman:
+            _ = Era_Caveman()
+        case Era.AncientEgypt:
+            print("Egypt")
+        default:
+            print("Era wrong")
+            
+        }
+    }
+    
+    var eraStarted:Bool = false
+    
     /* Need to implement a multiplier for image size and peg spacing to create the same experience on every device */
     var mult:CGFloat = (DeviceType.IS_IPHONE_4_OR_LESS || DeviceType.IS_IPHONE_5 || DeviceType.IS_IPHONE_6 ? 2 : 3)
 }

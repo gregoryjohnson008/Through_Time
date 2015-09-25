@@ -49,14 +49,18 @@ class ViewController: UIViewController {
     
     let transitionManager = TransitionManager(direction: TransitionManager.Direction.down)
     
-    var currentEra = EraSuperClass()
-    
     var width:CGFloat = 0
     var length:CGFloat = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        if(data_s.eraStarted == false)
+        {
+            data_s.startEra()
+            data_s.eraStarted = true
+        }
         
         //Starts music if not already on
         if(data_s.audioURL != nil && !data_s.musicStarted)
@@ -86,17 +90,6 @@ class ViewController: UIViewController {
         
         //Set up money per second text
         self.moneyPerSecondLabel.text = String(format: "%i gold/second", data_s.perSec)
-        
-        //Set up button titles based on current Era
-        switch data_s.timePeriod
-        {
-            case Game_s.Era.Caveman:
-                currentEra = Era_Caveman()
-            case Game_s.Era.AncientEgypt:
-                self.buttonMoney1.setTitle("Eqypt", forState: UIControlState.Normal)
-            default:
-                print("Era not yet implemented")
-        }
         
         buttonClicker.backgroundColor = UIColor.clearColor()
         buttonMoney1.backgroundColor = UIColor.clearColor()

@@ -53,7 +53,7 @@ class Avatar
     
     //Take damage if defense is not strong enough to block it
     //Return -1 if health reaches 0, 1 otherwise
-    func takeDamage(amount:Int) -> Int
+    func takeDamage(amount:Int) -> (damage:Int, alive:Bool)
     {
         let damage = amount - self.defense
         if(damage > 0)
@@ -62,9 +62,15 @@ class Avatar
         }
         if(self.currHealth != 0)
         {
-            return 1
+            return (damage, true)
         }
-        return -1
+        return (damage, false)
+    }
+    
+    //Deals damage witin the range of minAttack - maxAttack
+    func getDamage() -> Int
+    {
+        return Int(arc4random_uniform(UInt32(self.maxAttack - self.minAttack + 1)) + UInt32(self.minAttack))
     }
     
     //Heal after paying to get health back after a battle

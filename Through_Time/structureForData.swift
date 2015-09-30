@@ -52,6 +52,12 @@ struct Game_s
         case Future
     }
     
+    /********* Stats *********/
+    
+    var totalHealedForEra:Int = 0
+    
+    /*************************/
+    
     var im_click:UIImage? = nil
     var im_but1:UIImage? = nil
     var im_but2:UIImage? = nil

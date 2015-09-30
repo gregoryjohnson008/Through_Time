@@ -41,7 +41,7 @@ class GameOfLuckViewController: UIViewController
         button2.setTitle("", forState: UIControlState.Normal)
         button3.setTitle("", forState: UIControlState.Normal)
         
-        var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
+        _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning()

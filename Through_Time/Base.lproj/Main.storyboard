@@ -1728,13 +1728,205 @@
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I5b-NN-tgR">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuR-EH-8tf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="0Qg-ur-6kC"/>
+                                    <constraint firstAttribute="height" constant="65" id="8L1-Wo-lvy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Heal"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Qg-ur-6kC"/>
+                                        <exclude reference="8L1-Wo-lvy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0Qg-ur-6kC"/>
+                                        <include reference="8L1-Wo-lvy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="healPressed:" destination="O1O-MX-dfp" eventType="touchUpInside" id="bLc-CV-CWy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCb-dG-U6c">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5es-2Y-Xg4">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="150" id="OTV-x2-REm">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5es-2Y-Xg4"/>
+                                        <exclude reference="OTV-x2-REm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5es-2Y-Xg4"/>
+                                        <include reference="OTV-x2-REm"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-Ue-jeq">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="051-jq-wWA">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="21" id="niY-nc-4fy">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="051-jq-wWA"/>
+                                        <exclude reference="niY-nc-4fy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="051-jq-wWA"/>
+                                        <include reference="niY-nc-4fy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Healed during this era:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJD-kI-iS5">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="TqW-Oe-BZP">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="17" id="gXF-6e-TqP">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="TqW-Oe-BZP"/>
+                                        <exclude reference="gXF-6e-TqP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="TqW-Oe-BZP"/>
+                                        <include reference="gXF-6e-TqP"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Money:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcf-zx-b9D">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1iz-Vp-F0M">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="300"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="17" id="Vya-Wk-Btf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1iz-Vp-F0M"/>
+                                        <exclude reference="Vya-Wk-Btf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="1iz-Vp-F0M"/>
+                                        <include reference="Vya-Wk-Btf"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="GCb-dG-U6c" firstAttribute="centerX" secondItem="I5b-NN-tgR" secondAttribute="centerX" id="0br-LV-lCY"/>
+                            <constraint firstItem="UuR-EH-8tf" firstAttribute="centerY" secondItem="I5b-NN-tgR" secondAttribute="centerY" id="6ln-A3-sJF"/>
+                            <constraint firstItem="rlz-Ue-jeq" firstAttribute="top" secondItem="UuR-EH-8tf" secondAttribute="bottom" constant="75" id="8nk-aJ-EQq"/>
+                            <constraint firstItem="GCb-dG-U6c" firstAttribute="top" secondItem="Xcf-zx-b9D" secondAttribute="bottom" constant="75" id="Dt7-mN-Nsw"/>
+                            <constraint firstItem="Xcf-zx-b9D" firstAttribute="centerX" secondItem="I5b-NN-tgR" secondAttribute="centerX" id="QuD-fa-DCm"/>
+                            <constraint firstItem="TJD-kI-iS5" firstAttribute="centerX" secondItem="I5b-NN-tgR" secondAttribute="centerX" id="YQ3-8v-uDk"/>
+                            <constraint firstItem="TJD-kI-iS5" firstAttribute="top" secondItem="rlz-Ue-jeq" secondAttribute="bottom" constant="75" id="iFD-Z7-tmT"/>
+                            <constraint firstItem="rlz-Ue-jeq" firstAttribute="centerX" secondItem="I5b-NN-tgR" secondAttribute="centerX" id="kOo-5E-fxO"/>
+                            <constraint firstItem="UuR-EH-8tf" firstAttribute="top" secondItem="GCb-dG-U6c" secondAttribute="bottom" constant="75" id="mZV-2h-bwt"/>
+                            <constraint firstItem="UuR-EH-8tf" firstAttribute="centerX" secondItem="I5b-NN-tgR" secondAttribute="centerX" id="w8N-xx-XLD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="UuR-EH-8tf"/>
+                                <exclude reference="GCb-dG-U6c"/>
+                                <exclude reference="rlz-Ue-jeq"/>
+                                <exclude reference="TJD-kI-iS5"/>
+                                <exclude reference="Xcf-zx-b9D"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QuD-fa-DCm"/>
+                                <exclude reference="0br-LV-lCY"/>
+                                <exclude reference="Dt7-mN-Nsw"/>
+                                <exclude reference="6ln-A3-sJF"/>
+                                <exclude reference="mZV-2h-bwt"/>
+                                <exclude reference="w8N-xx-XLD"/>
+                                <exclude reference="8nk-aJ-EQq"/>
+                                <exclude reference="kOo-5E-fxO"/>
+                                <exclude reference="YQ3-8v-uDk"/>
+                                <exclude reference="iFD-Z7-tmT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="UuR-EH-8tf"/>
+                                <include reference="GCb-dG-U6c"/>
+                                <include reference="rlz-Ue-jeq"/>
+                                <include reference="TJD-kI-iS5"/>
+                                <include reference="Xcf-zx-b9D"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="QuD-fa-DCm"/>
+                                <include reference="0br-LV-lCY"/>
+                                <include reference="Dt7-mN-Nsw"/>
+                                <include reference="6ln-A3-sJF"/>
+                                <include reference="mZV-2h-bwt"/>
+                                <include reference="w8N-xx-XLD"/>
+                                <include reference="8nk-aJ-EQq"/>
+                                <include reference="kOo-5E-fxO"/>
+                                <include reference="YQ3-8v-uDk"/>
+                                <include reference="iFD-Z7-tmT"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="jf2-4v-lx9" appends="YES" id="fUE-St-o1A"/>
                             <outletCollection property="gestureRecognizers" destination="Ok4-Na-Nqs" appends="YES" id="SyS-pl-yMg"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="healMe_button" destination="UuR-EH-8tf" id="SNS-8L-hrC"/>
+                        <outlet property="health_lbl" destination="rlz-Ue-jeq" id="bWD-hb-XSf"/>
+                        <outlet property="money_lbl" destination="Xcf-zx-b9D" id="F6m-QS-YvO"/>
+                        <outlet property="price_lbl" destination="GCb-dG-U6c" id="J4P-kQ-mFa"/>
+                        <outlet property="statHealed_lbl" destination="TJD-kI-iS5" id="TYl-7o-a4Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ6-gh-oJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="jf2-4v-lx9">

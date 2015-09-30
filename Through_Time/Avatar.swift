@@ -74,6 +74,10 @@ class Avatar
     }
     
     //Heal after paying to get health back after a battle
+    func heal(amount:Int)
+    {
+        self.currHealth = min(self.maxHealth, self.currHealth + amount)
+    }
     func heal()
     {
         self.currHealth = self.maxHealth

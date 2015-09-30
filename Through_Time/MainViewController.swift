@@ -111,12 +111,12 @@ class ViewController: UIViewController {
         //Start getting money per second
         if(data_s.toAddOverTime)
         {
-            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("addMoney"), userInfo: nil, repeats: true)
+            _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("addMoney"), userInfo: nil, repeats: true)
             data_s.toAddOverTime = false
         }
         else
         {
-            var moneyAddTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
+            _ = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateMoney"), userInfo: nil, repeats: true)
         }
     }
     

@@ -101,6 +101,10 @@ class GameViewController: UIViewController
         {
             transitionManager.changeDir(TransitionManager.Direction.down)
         }
+        else if(segue.identifier == "toHospital")
+        {
+            transitionManager.changeDir(TransitionManager.Direction.right)
+        }
         
         // this gets a reference to the screen that we're about to transition to
         let toViewController = segue.destinationViewController 

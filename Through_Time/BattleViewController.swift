@@ -251,6 +251,10 @@ class BattleViewController: UIViewController
         {
             transitionManager.changeDir(TransitionManager.Direction.down)
         }
+        else if(segue.identifier == "toHospital")
+        {
+            transitionManager.changeDir(TransitionManager.Direction.up)
+        }
         
         let toViewController = segue.destinationViewController 
         // instead of using the default transition animation, we'll ask

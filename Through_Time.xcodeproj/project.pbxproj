@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CEE40651BBC5C9100D8915C /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE40641BBC5C9100D8915C /* HospitalViewController.swift */; };
 		F34636B01AAFA86B00D9D04D /* EraSuperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34636AF1AAFA86B00D9D04D /* EraSuperClass.swift */; };
 		F34636B21AAFAE1300D9D04D /* Era_Caveman.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34636B11AAFAE1300D9D04D /* Era_Caveman.swift */; };
 		F34CD0871A9FE6D600711EA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34CD0861A9FE6D600711EA1 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CEE40641BBC5C9100D8915C /* HospitalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
 		F34636AF1AAFA86B00D9D04D /* EraSuperClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraSuperClass.swift; sourceTree = "<group>"; };
 		F34636B11AAFAE1300D9D04D /* Era_Caveman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Era_Caveman.swift; sourceTree = "<group>"; };
 		F34CD0811A9FE6D600711EA1 /* Through Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Through Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				F3B5D0931ABB8DB300A1BB55 /* Peg.swift */,
 				F3ECEBCF1AC4D46000AA64C9 /* Bar.swift */,
 				F3D45BA11B64291900B73551 /* BattleViewController.swift */,
+				1CEE40641BBC5C9100D8915C /* HospitalViewController.swift */,
 			);
 			path = Through_Time;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEE40651BBC5C9100D8915C /* HospitalViewController.swift in Sources */,
 				F3D45BA21B64291900B73551 /* BattleViewController.swift in Sources */,
 				F3D5AABA1AAFBBB300603D31 /* AchievementsViewController.swift in Sources */,
 				F34CD0A91AA3794E00711EA1 /* TransitionManager.swift in Sources */,

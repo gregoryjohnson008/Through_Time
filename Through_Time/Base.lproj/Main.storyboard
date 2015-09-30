@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -721,33 +721,33 @@
                                 <exclude reference="SB6-ag-yid"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1yd-z6-Pk4"/>
-                                <exclude reference="vxw-nB-lbP"/>
-                                <exclude reference="69c-EY-haN"/>
-                                <exclude reference="kUK-nh-dfa"/>
-                                <exclude reference="BgO-ZS-ctf"/>
-                                <exclude reference="b3m-O3-hAy"/>
-                                <exclude reference="xij-Cv-c0g"/>
+                                <exclude reference="Aov-mE-CTP"/>
                                 <exclude reference="exu-l7-8RR"/>
                                 <exclude reference="tqI-vf-ujz"/>
-                                <exclude reference="Wgl-7R-33R"/>
-                                <exclude reference="gQv-m6-l9h"/>
-                                <exclude reference="eu6-Wx-r8R"/>
-                                <exclude reference="5kq-WO-hmd"/>
                                 <exclude reference="Pb2-Fd-127"/>
-                                <exclude reference="Qjh-mP-PiM"/>
+                                <exclude reference="Wgl-7R-33R"/>
+                                <exclude reference="vxw-nB-lbP"/>
+                                <exclude reference="BgO-ZS-ctf"/>
+                                <exclude reference="xij-Cv-c0g"/>
+                                <exclude reference="gQv-m6-l9h"/>
                                 <exclude reference="JNm-vy-hfB"/>
                                 <exclude reference="ugn-85-9KK"/>
                                 <exclude reference="5gI-iO-phI"/>
                                 <exclude reference="9Nt-43-mzZ"/>
-                                <exclude reference="Aov-mE-CTP"/>
-                                <exclude reference="CkJ-Mf-wW4"/>
                                 <exclude reference="5qD-3S-cN1"/>
                                 <exclude reference="7Mw-vL-CQ3"/>
                                 <exclude reference="dQD-pk-8Mf"/>
                                 <exclude reference="gJ8-ds-34H"/>
+                                <exclude reference="69c-EY-haN"/>
+                                <exclude reference="CkJ-Mf-wW4"/>
+                                <exclude reference="1yd-z6-Pk4"/>
+                                <exclude reference="kUK-nh-dfa"/>
+                                <exclude reference="b3m-O3-hAy"/>
                                 <exclude reference="sY6-ia-MtZ"/>
                                 <exclude reference="tIa-WG-t6E"/>
+                                <exclude reference="Qjh-mP-PiM"/>
+                                <exclude reference="eu6-Wx-r8R"/>
+                                <exclude reference="5kq-WO-hmd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -761,49 +761,50 @@
                                 <include reference="SB6-ag-yid"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1yd-z6-Pk4"/>
+                                <include reference="Aov-mE-CTP"/>
+                                <include reference="exu-l7-8RR"/>
+                                <include reference="tqI-vf-ujz"/>
+                                <include reference="Pb2-Fd-127"/>
+                                <include reference="Wgl-7R-33R"/>
                                 <include reference="vxw-nB-lbP"/>
-                                <exclude reference="69c-EY-haN"/>
-                                <exclude reference="BXf-Tu-BRs"/>
-                                <include reference="kUK-nh-dfa"/>
                                 <include reference="BgO-ZS-ctf"/>
                                 <exclude reference="EoC-L4-rC2"/>
                                 <exclude reference="PFs-Y2-cS1"/>
                                 <exclude reference="T9R-iL-PfR"/>
-                                <include reference="b3m-O3-hAy"/>
                                 <include reference="xij-Cv-c0g"/>
-                                <include reference="exu-l7-8RR"/>
-                                <include reference="tqI-vf-ujz"/>
-                                <include reference="Wgl-7R-33R"/>
                                 <include reference="gQv-m6-l9h"/>
-                                <include reference="eu6-Wx-r8R"/>
-                                <include reference="5kq-WO-hmd"/>
-                                <include reference="Pb2-Fd-127"/>
-                                <include reference="Qjh-mP-PiM"/>
                                 <include reference="JNm-vy-hfB"/>
                                 <exclude reference="5RC-hm-4Cb"/>
                                 <include reference="ugn-85-9KK"/>
                                 <include reference="5gI-iO-phI"/>
                                 <include reference="9Nt-43-mzZ"/>
-                                <exclude reference="DgN-wU-Bi9"/>
                                 <exclude reference="SSQ-IA-zYt"/>
-                                <include reference="Aov-mE-CTP"/>
-                                <include reference="CkJ-Mf-wW4"/>
-                                <exclude reference="4XC-Cd-n2t"/>
                                 <include reference="5qD-3S-cN1"/>
                                 <include reference="7Mw-vL-CQ3"/>
                                 <exclude reference="aHS-hc-X7Q"/>
                                 <include reference="dQD-pk-8Mf"/>
                                 <include reference="gJ8-ds-34H"/>
                                 <exclude reference="gkV-RQ-i3e"/>
+                                <exclude reference="69c-EY-haN"/>
+                                <include reference="CkJ-Mf-wW4"/>
+                                <include reference="1yd-z6-Pk4"/>
+                                <exclude reference="BXf-Tu-BRs"/>
+                                <include reference="kUK-nh-dfa"/>
+                                <include reference="b3m-O3-hAy"/>
+                                <exclude reference="DgN-wU-Bi9"/>
+                                <exclude reference="4XC-Cd-n2t"/>
                                 <exclude reference="h6z-Se-VCV"/>
                                 <include reference="sY6-ia-MtZ"/>
                                 <include reference="tIa-WG-t6E"/>
+                                <include reference="Qjh-mP-PiM"/>
+                                <include reference="eu6-Wx-r8R"/>
+                                <include reference="5kq-WO-hmd"/>
                             </mask>
                         </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fHi-Bu-HW2" appends="YES" id="7S5-hP-Gia"/>
                             <outletCollection property="gestureRecognizers" destination="knn-zB-gBa" appends="YES" id="IWr-O2-cQC"/>
+                            <outletCollection property="gestureRecognizers" destination="hZn-t5-us4" appends="YES" id="NSc-hZ-pwq"/>
                         </connections>
                     </view>
                     <connections>
@@ -835,8 +836,13 @@
                         <segue destination="i3a-KV-8DG" kind="show" identifier="toAchievements" id="qPM-F2-eA7"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="hZn-t5-us4">
+                    <connections>
+                        <segue destination="O1O-MX-dfp" kind="show" identifier="toHospital" id="qjQ-YB-edA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-750" y="354"/>
+            <point key="canvasLocation" x="-262.5" y="405.75"/>
         </scene>
         <!--Main-->
         <scene sceneID="ufC-wZ-h7g">
@@ -1563,19 +1569,6 @@
                                     <action selector="playGame:" destination="3Ai-vJ-LlR" eventType="touchUpInside" id="mdb-0p-jjq"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-pL-98I" userLabel="display1">
-                                <rect key="frame" x="50" y="336" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Jma-Dv-9Y6"/>
-                                    <constraint firstAttribute="width" constant="32" id="Xp4-7t-dcd"/>
-                                </constraints>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Jma-Dv-9Y6"/>
-                                        <include reference="Xp4-7t-dcd"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9U8-8b-VRD" userLabel="display2">
                                 <rect key="frame" x="284" y="336" width="32" height="32"/>
                                 <constraints>
@@ -1634,6 +1627,19 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAd-pL-98I" userLabel="display1">
+                                <rect key="frame" x="50" y="336" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Jma-Dv-9Y6"/>
+                                    <constraint firstAttribute="width" constant="32" id="Xp4-7t-dcd"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Jma-Dv-9Y6"/>
+                                        <include reference="Xp4-7t-dcd"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1662,11 +1668,11 @@
                                 <include reference="pqM-8b-5HB"/>
                                 <include reference="aGQ-Ua-YBY"/>
                                 <include reference="3N2-OU-CYd"/>
-                                <include reference="tAd-pL-98I"/>
                                 <include reference="9U8-8b-VRD"/>
                                 <include reference="7IL-d0-Blp"/>
                                 <include reference="OAf-7T-H25"/>
                                 <include reference="1y5-bS-bfN"/>
+                                <include reference="tAd-pL-98I"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5Gp-cQ-Xe5"/>
@@ -1712,6 +1718,38 @@
             </objects>
             <point key="canvasLocation" x="1410" y="414"/>
         </scene>
+        <!--Hospital View Controller-->
+        <scene sceneID="BUN-1e-qXK">
+            <objects>
+                <viewController id="O1O-MX-dfp" customClass="HospitalViewController" customModule="Through_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lad-il-XTz"/>
+                        <viewControllerLayoutGuide type="bottom" id="nvX-mf-1oe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I5b-NN-tgR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jf2-4v-lx9" appends="YES" id="fUE-St-o1A"/>
+                            <outletCollection property="gestureRecognizers" destination="Ok4-Na-Nqs" appends="YES" id="SyS-pl-yMg"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ6-gh-oJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="jf2-4v-lx9">
+                    <connections>
+                        <segue destination="OEh-kf-LIz" kind="show" identifier="toCoinDrop" id="1Tn-Pb-bET"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Ok4-Na-Nqs">
+                    <connections>
+                        <segue destination="5C6-ln-biL" kind="show" identifier="toBattleView" id="2Dc-bm-eTp"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-262.5" y="1216.5"/>
+        </scene>
         <!--coinDrop-->
         <scene sceneID="oh7-zw-1hA">
             <objects>
@@ -1727,6 +1765,7 @@
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="guH-if-YUN" appends="YES" id="ugj-g4-z1q"/>
+                            <outletCollection property="gestureRecognizers" destination="4Ld-KO-8iZ" appends="YES" id="BVe-ko-x0k"/>
                         </connections>
                     </view>
                 </viewController>
@@ -1734,6 +1773,11 @@
                 <swipeGestureRecognizer direction="down" id="guH-if-YUN">
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="toMain" id="SQq-G7-Ttn"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="4Ld-KO-8iZ">
+                    <connections>
+                        <segue destination="O1O-MX-dfp" kind="show" identifier="toHospital" id="Mem-3N-5go"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1748,9 +1792,11 @@
         <image name="run-slow" width="99" height="95"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fbk-vy-AVW"/>
-        <segue reference="pbU-qi-SVb"/>
+        <segue reference="Mem-3N-5go"/>
+        <segue reference="1Tn-Pb-bET"/>
+        <segue reference="SQq-G7-Ttn"/>
         <segue reference="qPM-F2-eA7"/>
+        <segue reference="2Dc-bm-eTp"/>
         <segue reference="gct-L0-JV5"/>
     </inferredMetricsTieBreakers>
 </document>
